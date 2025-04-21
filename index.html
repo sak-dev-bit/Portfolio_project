@@ -24,22 +24,67 @@
                 <p>Discover  about me and projects</p>
         </div>
     </div>
+</div>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/about.png" alt="about_me" width="25%">
-                </div>
-                <div class="about-col-2">
-                    <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at erat nec nisi facilisis bibendum. Sed ac ligula a enim facilisis convallis.</p>
-                </div>
-                              
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.png" alt="about us image" width="10%">
             </div>
-        </div>  
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aliquid doloribus! Iusto est quisquam assumenda, dignissimos voluptas ducimus, quam rem suscipit corporis distinctio alias error at, vel autem sunt debitis itaque voluptates temporibus molestiae consequuntur excepturi nobis eius. Laborum quidem alias blanditiis est accusamus delectus mollitia ea architecto a, magnam reiciendis soluta totam suscipit aliquam consectetur earum, quae ducimus itaque. Consequuntur facere eveniet dolore illo cumque. Ipsum quo vero ea adipisci, dolor magnam neque veniam odio? Dolor atque, esse placeat exercitationem aliquid quo iste ab illo iusto consequuntur temporibus nisi laborum veritatis quis pariatur porro velit doloribus nemo? Dolores, aperiam!</p>                
+                <div class="tab-titles">
+                    <p class="tab-links  active-link" onclick="openTab('skill')">Skill</p>
+                    <p class="tab-links"onclick="openTab('Certification')">Certification</p>
+                    <p class="tab-links"onclick="openTab('Education')">Education</p>
+                    
+                </div>
+                <div class="tab-content active-tab" id="skill">
+                    <ul>
+                        <li><span>Programming Languages: </span>  <br>JavaScript, C++, Python  </li>
+                        <li><span>Frameworks & Libraries:</span> <br> React, Next</li>
+                        <li><span>Tools & Technologies:</span> <br> Git&Github, Firebase ,WordPress</li>
+                        <li><span>Software Development:</span> <br> SDLC, Debugging, Aglie</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="Certification">
+                    <ul>
+                        <li>Google IT Automation with Python</li>
+                        <li>Google Data Analytics</li>
+                        <li>Google UX Design</li>
+                        <li>Google Project Management</li> 
+                    </ul>
+                </div>
+                <div class="tab-content" id="Education">
+                    <ul>
+                        <li><span>Master of Computer Application  </span> <br>  August 2024 - Present   </li>
+                        <li><span>Bachelor of Business Administration (Computer Application)</span> <br> April 2021 - April 2024 <br> CGPA - 8.50 | Grade - A+ </li>
+                        <li><span>Higher Secondary Certificate Examination </span> <br>  March  2021 <br>  Percentage - 66.50%</li>
+                    </ul>
+                </div>
+           
+               
+            </div>
+        </div>
     </div>
-   
-   
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontent = document.getElementsByClassName("tab-content");
+    
+    function openTab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontents of tabcontent){
+            tabcontents.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
