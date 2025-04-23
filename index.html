@@ -13,15 +13,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" alt="logo" width="10%">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
-                    <i class="fa-regular fa-circle-xmark"></i>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <h1>Welcome to My Portfolio</h1>
@@ -107,6 +107,36 @@
         <a href="#" class="btn">See More</a>
     </div>
 </div>
+<div id="blog"></div>
+    <div class="container">
+        <h1 class="sub-title">MY BLOG</h1>
+        <p>Explore my latest articles and insights on design, development, and more.</p>
+        <div class="blog-cards">
+            <div class="blog-card">
+                <img src="images/images.jpeg" alt="Blog Image" width="10%">
+                <p class="blog-meta">May 31, 2020 | Design</p>
+                <h3 class="blog-title">Make Your Website</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-card">
+                <img src="images/images.jpeg" alt="Blog Image" width="10%">
+                <p class="blog-meta">June 15, 2020 | Development</p>
+                <h3 class="blog-title">Build Responsive Layouts</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-card">
+                <img src="images/images.jpeg"alt="Blog Image" width="10%">
+                <p class="blog-meta">July 10, 2020 | Tips</p>
+                <h3 class="blog-title">Improve Your Workflow</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="contact">
     <div class="container">
@@ -147,6 +177,16 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }    
+</script>
+
+<script>
+    var sidemeu= document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right="0";
+    }
+    function closemenu(){
+        sidemeu.style.right="-200px";
     }
 </script>
 </body>
